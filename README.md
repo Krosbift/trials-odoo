@@ -35,12 +35,12 @@ Odoo permite a las empresas automatizar y optimizar sus procesos internos, mejor
 
 ### 🐧 En Linux:
 ```bash
-python3 odoo -r "<usuario>" -w "<contraseña>" -d "<base_de_datos>" --addons-path=<path> -i "<modulo>"
+python3 odoo-bin -r "<usuario>" -w "<contraseña>" -d "<base_de_datos>" --addons-path=<path> -i "<modulo>"
 ```
 
 ### 🪟 En Windows:
 ```shell
-python odoo -r "<usuario>" -w "<contraseña>" -d "<base_de_datos>" --addons-path=<path> -i "<modulo>"
+python odoo-bin -r "<usuario>" -w "<contraseña>" -d "<base_de_datos>" --addons-path=<path> -i "<modulo>"
 ```
 
 <p align="center">
