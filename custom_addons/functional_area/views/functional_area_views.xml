@@ -1,0 +1,7 @@
+<odoo>
+  <record id="action_functional_area" model="ir.actions.act_window">
+    <field name="name">Functional Areas</field>
+    <field name="res_model">functional_area.functional_area</field>
+    <field name="view_mode">list,form</field>
+  </record>
+</odoo>

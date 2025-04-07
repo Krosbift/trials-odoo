@@ -1,0 +1,4 @@
+<odoo>
+  <menuitem id="menu_functional_area_root" name="Functional Area Management"></menuitem>
+  <menuitem action="action_functional_area" id="menu_functional_area" name="Functional Areas" parent="menu_functional_area_root"></menuitem>
+</odoo>

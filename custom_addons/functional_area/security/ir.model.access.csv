@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_functional_area_functional_area,functional_area.functional_area,model_functional_area_functional_area,base.group_user,1,1,1,1
