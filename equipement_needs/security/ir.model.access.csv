@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_equipement_needs_equipement_needs,equipement_needs.equipement_needs,model_equipement_needs_equipement_needs,base.group_user,1,1,1,1
