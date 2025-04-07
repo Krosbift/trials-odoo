@@ -1,5 +1,5 @@
 {
-    "name": "Estado de Aprobación",
+    "name": "Estados de Aprobación",
     "version": "0.1",
     "depends": ["base"],
     "author": "NePinFe",
