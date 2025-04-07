@@ -6,7 +6,7 @@ class equipment_needs(models.Model):
     _name = "equipment.needs"
     _description = "Equipment Needs Request"
 
-    equipement = fields.Char(string="Equipment", required=True)
+    equipment = fields.Char(string="Equipment", required=True)
     quantity = fields.Integer(string="Quantity", required=True)
     unit_cost = fields.Float(string="Unit Cost", required=True)
     total_cost = fields.Float(
