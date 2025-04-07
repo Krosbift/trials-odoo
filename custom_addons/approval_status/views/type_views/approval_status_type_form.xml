@@ -1,0 +1,17 @@
+<odoo>
+  <record id="view_approval_status_type_form" model="ir.ui.view">
+    <field name="name">approval_status_type.form</field>
+    <field name="model">approval_status_type.approval_status_type</field>
+    <field name="arch" type="xml">
+      <form string="Approval Status Type">
+        <sheet>
+          <group>
+            <field name="id" readonly="1"></field>
+            <field name="name"></field>
+            <field name="description"></field>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+</odoo>
