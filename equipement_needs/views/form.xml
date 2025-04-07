@@ -4,14 +4,33 @@
       <field name="name">equipement.needs.form</field>
       <field name="model">equipement_needs.equipement_needs</field>
       <field name="arch" type="xml">
-        <form>
-          <sheet>
-            <group>
-              <field name="equipement"/>
-              <field name="quantity"/>
-              <field name="unit_cost"/>
-            </group>
-          </sheet>
+        <form string="Equipment Needs">
+            <header>
+                <!-- Aquí podríamos agregar estados y botones en el futuro -->
+            </header>
+            <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="equipement" placeholder="Equipment Name"/>
+                    </h1>
+                </div>
+                <group>
+                    <group name="equipment_details" string="Equipment Details">
+                      <field name="quantity"/>
+                      <field name="unit_cost"/>
+                      <field name="total_cost" readonly="1"/>
+                    </group>
+                    <group name="additional_info" string="Additional Information">
+                        <field name="priority" widget="priority"/>
+                        <field name="request_date"/>
+                        <field name="notes"/>
+                    </group>
+                </group>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
         </form>
       </field>
     </record>
