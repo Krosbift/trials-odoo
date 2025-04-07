@@ -1,0 +1,19 @@
+<odoo>
+  <record id="view_form_material_needs" model="ir.ui.view">
+    <field name="name">material.needs.form</field>
+    <field name="model">material_needs.material_needs</field>
+    <field name="arch" type="xml">
+      <form string="Material Need">
+        <sheet>
+          <group>
+            <field name="material_name"></field>
+            <field name="quantity"></field>
+            <field name="unit_cost"></field>
+            <field name="total_cost" readonly="1"></field>
+            <field name="approval_status_id"></field>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+</odoo>

@@ -1,14 +1,16 @@
 {
-    "name": "material_needs",
+    "name": "Necesidades de Material",
     "version": "0.1",
     "depends": ["base"],
-    "author": "Criko",
-    "description": "Long description of module's purpose",
+    "author": "NePinFe",
     "data": [
-        "views/views.xml",
         "security/ir.model.access.csv",
-        # "views/templates.xml",
+        "views/material_needs_form.xml",
+        "views/material_needs_list.xml",
+        "views/material_needs_menu.xml",
+        "views/material_needs_views.xml",
     ],
     "installable": True,
     "application": True,
+    "license": "LGPL-3",
 }
