@@ -1,7 +1,7 @@
 {
     "name": "Solicitudes de equipo",
     "category": "Data",
-    "version": "0.1",
+    "version": "0.0.1",
     "depends": ["base"],
     "data": [
         "security/ir.model.access.csv",

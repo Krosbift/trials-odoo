@@ -10,7 +10,7 @@
                     <group class="oe_title" name="employee_name" string="Employee">
                         <h1>
                             <field name="fullName" placeholder="Employee"/>
-                            <field name="document"/>
+                            <field name="document" placeholder="Document number"/>
                         </h1>
                     </group>
                     <group name="employee_details" string="Employee Payroll">
