@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="job_position_administrative" model="job_position.job_position">
+    <record id="employee_position_administrative" model="job_position">
         <field name="position">administrative</field>
     </record>
-    <record id="job_position_worker" model="job_position.job_position">
+    <record id="employee_position_worker" model="job_position">
         <field name="position">worker</field>
     </record>
 </odoo>

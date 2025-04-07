@@ -1,9 +1,0 @@
-<odoo>
-  <menuitem id="equipement_needs_menu_root" name="Equipement Needs">
-    <menuitem id="equipement_needs_menu" name="Manage Equipement" >
-      <menuitem id="equipement_needs_menu_items" 
-                action="action_equipement_needs"/>
-    </menuitem>
-  </menuitem>
-</odoo>
-
