@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <menuitem id="equipment_needs_menu_root" name="Equipment Needs">
-        <menuitem id="equipment_needs_menu" name="Manage Equipment">
-            <menuitem id="equipment_needs_menu_items" action="equipment_needs_action"/>
-        </menuitem>
+        <menuitem id="equipment_needs_menu_items" name="Manage Equipment" action="equipment_needs_action"/>
     </menuitem>
 </odoo>

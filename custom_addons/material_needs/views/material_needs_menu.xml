@@ -1,4 +1,5 @@
 <odoo>
-  <menuitem id="menu_material_needs_root" name="Material Management"></menuitem>
-  <menuitem action="action_material_needs" id="menu_material_needs" name="Material Needs" parent="menu_material_needs_root"></menuitem>
+  <menuitem id="menu_material_needs_root" name="Material Needs">
+    <menuitem id="menu_material_needs" action="action_material_needs" name="Material Needs"></menuitem>
+  </menuitem>
 </odoo>
