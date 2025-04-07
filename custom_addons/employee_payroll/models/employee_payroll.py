@@ -27,14 +27,14 @@ class employee_payroll(models.Model):
         - Constrains the `monthly_salary` field to ensure it is a positive value.
     """
 
-    _name = "employee_payroll.employee_payroll"
-    _description = "employee_payroll.employee_payroll"
+    _name = "employee.payroll"
+    _description = "Employee Payroll Request"
 
     fullName = fields.Char(string="Full Name", size=32, required=True, trim=True)
     document = fields.Char(string="Document Number", size=32, required=True)
     monthly_salary = fields.Float(string="Monthly Salary", required=True)
     job_position_id = fields.Many2one(
-        comodel_name="job_position.job_position", string="Job Position", required=True
+        comodel_name="job_position", string="Job Position", required=True
     )
     annual_salary = fields.Float(
         string="Annual Salary", compute="_compute_annual_salary", store=True

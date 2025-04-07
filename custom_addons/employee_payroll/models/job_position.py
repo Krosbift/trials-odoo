@@ -3,7 +3,7 @@ from odoo import models, fields
 
 class job_position(models.Model):
     """
-    Model: job_position.job_position
+    Model: job_position
     This model represents a job position within the organization. It includes the following fields:
     Fields:
         - position (Selection): Specifies the type of job position. It is a required field with the following options:
@@ -11,8 +11,8 @@ class job_position(models.Model):
             * "worker" - Worker
     """
 
-    _name = "job_position.job_position"
-    _description = "job_position.job_position"
+    _name = "job_position"
+    _description = "Employee Position"
     _rec_name = "position"
 
     position = fields.Selection(

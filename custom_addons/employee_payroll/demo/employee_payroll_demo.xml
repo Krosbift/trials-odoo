@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
   <data>
-    <record id="employee_payroll_1" model="employee_payroll.employee_payroll">
+    <record id="employee_payroll_1" model="employee.payroll">
       <field name="fullName">John Doe</field>
       <field name="document">123456</field>
       <field name="monthly_salary">3000</field>
       <field name="job_position_id" ref="job_position_administrative"/>
     </record>
-    <record id="employee_payroll_2" model="employee_payroll.employee_payroll">
+    <record id="employee_payroll_2" model="employee.payroll">
       <field name="fullName">Jane Smith</field>
       <field name="document">654321</field>
       <field name="monthly_salary">4000</field>
       <field name="job_position_id" ref="job_position_worker"/>
     </record>
-    <record id="employee_payroll_3" model="employee_payroll.employee_payroll">
+    <record id="employee_payroll_3" model="employee.payroll">
       <field name="fullName">Alice Johnson</field>
       <field name="document">789012</field>
       <field name="monthly_salary">3500</field>
       <field name="job_position_id" ref="job_position_administrative"/>
     </record>
-    <record id="employee_payroll_4" model="employee_payroll.employee_payroll">
+    <record id="employee_payroll_4" model="employee.payroll">
       <field name="fullName">Bob Brown</field>
       <field name="document">345678</field>
       <field name="monthly_salary">2800</field>
       <field name="job_position_id" ref="job_position_worker"/>
     </record>
-    <record id="employee_payroll_5" model="employee_payroll.employee_payroll">
+    <record id="employee_payroll_5" model="employee.payroll">
       <field name="fullName">Charlie Davis</field>
       <field name="document">567890</field>
       <field name="monthly_salary">3200</field>

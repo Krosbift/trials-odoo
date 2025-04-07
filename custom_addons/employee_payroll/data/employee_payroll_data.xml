@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
   <data>
-    <record id="employee_payroll_1" model="employee_payroll.employee_payroll">
+    <record id="employee_payroll_1" model="employee.payroll">
       <field name="fullName">Santiago Torifa Manso</field>
       <field name="document">1089930992</field>
       <field name="monthly_salary">8000000</field>
