@@ -1,5 +1,6 @@
 {
     "name": "Necesidades de Material",
+    "category": "Data",
     "version": "0.1",
     "depends": ["base", "functional_area"],
     "author": "NePinFe",
