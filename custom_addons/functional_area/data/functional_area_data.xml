@@ -1,0 +1,16 @@
+<odoo>
+    <data noupdate="1">
+        <record id="functional_area_1" model="functional_area.functional_area">
+            <field name="name">Human Resources</field>
+            <field name="description">Handles employee-related functions and policies.</field>
+        </record>
+        <record id="functional_area_2" model="functional_area.functional_area">
+            <field name="name">Finance</field>
+            <field name="description">Manages financial planning, analysis, and reporting.</field>
+        </record>
+        <record id="functional_area_3" model="functional_area.functional_area">
+            <field name="name">IT</field>
+            <field name="description">Responsible for technology infrastructure and support.</field>
+        </record>
+    </data>
+</odoo>

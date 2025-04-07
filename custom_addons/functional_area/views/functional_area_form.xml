@@ -1,17 +1,17 @@
 <odoo>
-  <record id="view_form_functional_area" model="ir.ui.view">
-    <field name="name">functional_area.form</field>
-    <field name="model">functional_area.functional_area</field>
-    <field name="arch" type="xml">
-      <form string="Functional Area">
-        <sheet>
-          <group>
-            <field name="id" readonly="1"></field>
-            <field name="name"></field>
-            <field name="description"></field>
-          </group>
-        </sheet>
-      </form>
-    </field>
-  </record>
+    <record id="view_form_functional_area" model="ir.ui.view">
+        <field name="name">functional_area.form</field>
+        <field name="model">functional_area.functional_area</field>
+        <field name="arch" type="xml">
+            <form string="Functional Area">
+                <sheet>
+                    <group>
+                        <field name="id" readonly="1"></field>
+                        <field name="name"></field>
+                        <field name="description"></field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 </odoo>

@@ -15,7 +15,7 @@
         "demo/employee_payroll_demo.xml",
         "demo/employee_position_demo.xml",
     ],
-    'installable': True,
-    'application': True,
-    'license': 'LGPL-3',
+    "installable": True,
+    "application": True,
+    "license": "LGPL-3",
 }

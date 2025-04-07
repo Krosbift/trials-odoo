@@ -1,13 +1,13 @@
 <odoo>
-  <record id="view_list_functional_area" model="ir.ui.view">
-    <field name="name">functional_area.list</field>
-    <field name="model">functional_area.functional_area</field>
-    <field name="arch" type="xml">
-      <list string="Functional Areas">
-        <field name="id"></field>
-        <field name="name"></field>
-        <field name="description"></field>
-      </list>
-    </field>
-  </record>
+    <record id="view_list_functional_area" model="ir.ui.view">
+        <field name="name">functional_area.list</field>
+        <field name="model">functional_area.functional_area</field>
+        <field name="arch" type="xml">
+            <list string="Functional Areas">
+                <field name="id"></field>
+                <field name="name"></field>
+                <field name="description"></field>
+            </list>
+        </field>
+    </record>
 </odoo>
