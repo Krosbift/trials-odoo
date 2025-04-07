@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_equipement_needs" model="ir.actions.act_window">
+      <field name="name">Equipement Needs</field>
+      <field name="res_model">equipement_needs.equipement_needs</field>
+      <field name="view_mode">list,form</field>
+    </record>
+</odoo>
