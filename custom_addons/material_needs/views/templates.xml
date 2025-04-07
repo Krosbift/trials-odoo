@@ -1,0 +1,46 @@
+<odoo>
+  <record id="view_form_material_needs" model="ir.ui.view">
+    <field name="name">material.needs.form</field>
+    <field name="model">material_needs.material_needs</field>
+    <field name="arch" type="xml">
+      <form string="Material Need">
+        <sheet>
+          <group>
+            <field name="material_name"/>
+            <field name="quantity"/>
+            <field name="unit_cost"/>
+            <field name="total_cost" readonly="1"/>
+            <field name="approval_status_id"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_tree_material_needs" model="ir.ui.view">
+    <field name="name">material.needs.tree</field>
+    <field name="model">material_needs.material_needs</field>
+    <field name="arch" type="xml">
+      <tree string="Material Needs">
+        <field name="material_name"/>
+        <field name="quantity"/>
+        <field name="unit_cost"/>
+        <field name="total_cost"/>
+        <field name="approval_status_id"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="action_material_needs" model="ir.actions.act_window">
+    <field name="name">Material Needs</field>
+    <field name="res_model">material_needs.material_needs</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="menu_material_needs_root" name="Material Management"/>
+  
+  <menuitem id="menu_material_needs"
+            name="Material Needs"
+            parent="menu_material_needs_root"
+            action="action_material_needs"/>
+</odoo>
