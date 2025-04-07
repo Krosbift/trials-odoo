@@ -1,0 +1,7 @@
+<odoo>
+  <record id="action_approval_status_type" model="ir.actions.act_window">
+    <field name="name">Approval Status Types</field>
+    <field name="res_model">approval_status_type.approval_status_type</field>
+    <field name="view_mode">list,form</field>
+  </record>
+</odoo>
