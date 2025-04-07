@@ -23,22 +23,49 @@ Odoo permite a las empresas automatizar y optimizar sus procesos internos, mejor
 ## 🛠️ Comando para iniciar Odoo local con módulos personalizados
 
 ### 🔧 Parámetros del comando:
+
 - **`-r`**: Usuario de la base de datos.
 - **`-w`**: Contraseña del usuario que ingresaste.
 - **`-d`**: Nombre de la base de datos.
 - **`--addons-path`**: Directorios de addons separados por comas.  
-    **Valor por defecto**: `addons,odoo/addons,custom/<nombre del repositorio>/custom_addons`.
-- **`-i`**: Módulo a instalar o reiniciar *(opcional)*.
-- **`-u`**: Módulo a actualizar *(opcional, solo cuando se estén usando módulos personalizados)*.
+   **Valor por defecto**: `addons,odoo/addons,custom/<nombre del repositorio>/custom_addons`.
+- **`-i`**: Módulo a instalar o reiniciar _(opcional)_.
+- **`-u`**: Módulo a actualizar _(opcional, solo cuando se estén usando módulos personalizados)_.
 
 ---
 
 ### 🐧 En Linux:
+
+#### Preparación en Arch Linux:
+
+Antes de ejecutar Odoo en Arch Linux, necesitas configurar el entorno:
+
+1. Instala Python 3.11 y crea un entorno virtual:
+
+```bash
+python3.11 -m venv venv
+```
+
+2. Instala las dependencias necesarias:
+
+```bash
+sudo pacman -S openldap cyrus-sasl gcc make python-virtualenv python-devel
+```
+
+3. Activa el entorno virtual:
+
+```bash
+source venv/bin/activate
+```
+
+#### Ejecución:
+
 ```bash
 python3 odoo-bin -r "<usuario>" -w "<contraseña>" -d "<base_de_datos>" --addons-path=<path> -i "<modulo>"
 ```
 
 ### 🪟 En Windows:
+
 ```shell
 python odoo-bin -r "<usuario>" -w "<contraseña>" -d "<base_de_datos>" --addons-path=<path> -i "<modulo>"
 ```
@@ -50,16 +77,19 @@ python odoo-bin -r "<usuario>" -w "<contraseña>" -d "<base_de_datos>" --addons-
 ## 🧩 Comando para crear un nuevo módulo
 
 ### 📄 Descripción:
+
 Este comando genera un nuevo módulo dentro de la estructura de Odoo.
 
 ---
 
 ### 🐧 En Linux:
+
 ```bash
 python3 odoo-bin scaffold <nombre_del_modulo> <ruta_destino>
 ```
 
 ### 🪟 En Windows:
+
 ```shell
 python .\odoo-bin scaffold <nombre_del_modulo> <ruta_destino>
 ```
@@ -67,13 +97,16 @@ python .\odoo-bin scaffold <nombre_del_modulo> <ruta_destino>
 ---
 
 ### 📌 Parámetros:
+
 - **`<nombre_del_modulo>`**: Nombre del módulo a crear.
 - **`<ruta_destino>`**: Carpeta donde se generará el módulo.
 
 ---
 
 ### 🎯 Ejemplo:
+
 #### Crear un módulo llamado `mi_modulo` en la carpeta `custom_addons`:
+
 ```bash
 python3 odoo-bin scaffold mi_modulo custom/trials-odoo/custom_addons
 ```
@@ -138,8 +171,9 @@ mi_modulo/
 
 - **`__init__.py`**  
   Inicializa el módulo en Python. Aquí se importan los paquetes principales (`models`, `controllers`, etc.).
-  
-  📌 *Ejemplo:*
+
+  📌 _Ejemplo:_
+
   ```python
   from . import models
   from . import controllers
@@ -147,8 +181,9 @@ mi_modulo/
 
 - **`__manifest__.py`**  
   Define los metadatos del módulo: nombre, versión, categoría, dependencias, vistas, reglas de acceso, etc.
-  
-  📌 *Ejemplo:*
+
+  📌 _Ejemplo:_
+
   ```python
   {
       'name': 'Gestión de Inventario Avanzada',
@@ -167,9 +202,11 @@ mi_modulo/
 ---
 
 ## 📂 controllers/
+
 Contiene los controladores web del módulo. Se utilizan para exponer rutas HTTP (usualmente públicas o para el frontend).
 
-📌 *Ejemplo:*
+📌 _Ejemplo:_
+
 ```python
 from odoo import http
 
@@ -182,9 +219,11 @@ class MyController(http.Controller):
 ---
 
 ## 📂 models/
+
 Aquí se definen los modelos de datos (clases que heredan de `models.Model`). Es el corazón del backend funcional de Odoo.
 
-📌 *Ejemplo:*
+📌 _Ejemplo:_
+
 ```python
 from odoo import models, fields
 
@@ -199,9 +238,11 @@ class ProductoPersonalizado(models.Model):
 ---
 
 ## 📂 views/
+
 Define las vistas XML: formularios, listas (tree), kanban, calendarios, menús, acciones, etc.
 
-📌 *Ejemplo:*
+📌 _Ejemplo:_
+
 ```xml
 <record id="view_form_producto" model="ir.ui.view">
   <field name="name">producto.form</field>
@@ -222,9 +263,11 @@ Define las vistas XML: formularios, listas (tree), kanban, calendarios, menús, 
 ---
 
 ## 📂 data/
+
 Contiene datos de configuración o iniciales (por ejemplo, secuencias, categorías, reglas de negocio). Se cargan automáticamente con el módulo.
 
-📌 *Ejemplo:*
+📌 _Ejemplo:_
+
 ```xml
 <record id="grupo_ventas" model="res.groups">
   <field name="name">Grupo de Ventas</field>
@@ -234,12 +277,14 @@ Contiene datos de configuración o iniciales (por ejemplo, secuencias, categorí
 ---
 
 ## 📂 security/
+
 Incluye la configuración de permisos de acceso.
 
 - `ir.model.access.csv`: define quién puede leer/escribir modelos.
 - Reglas (`ir.rule`): definen filtros de acceso dinámico por usuario.
 
-📌 *Ejemplo (CSV):*
+📌 _Ejemplo (CSV):_
+
 ```
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 acceso_producto,acceso_producto,model_mi_modulo_producto,,1,1,1,0
@@ -248,12 +293,14 @@ acceso_producto,acceso_producto,model_mi_modulo_producto,,1,1,1,0
 ---
 
 ## 📂 static/
+
 Contiene archivos estáticos que se usan en el sitio web o backend.
 
 - `description/`: imágenes utilizadas en el `__manifest__.py`.
 - `src/`: JS, CSS, fuentes, etc.
 
-📌 *Ejemplo de uso:*
+📌 _Ejemplo de uso:_
+
 ```xml
 <template id="assets_backend" name="Assets Backend" inherit_id="web.assets_backend">
   <xpath expr="." position="inside">
@@ -265,9 +312,11 @@ Contiene archivos estáticos que se usan en el sitio web o backend.
 ---
 
 ## 📂 report/
+
 Define informes personalizados (PDF, HTML) usando QWeb y plantillas.
 
-📌 *Ejemplo:*
+📌 _Ejemplo:_
+
 ```xml
 <report
   id="mi_reporte"
@@ -281,9 +330,11 @@ Define informes personalizados (PDF, HTML) usando QWeb y plantillas.
 ---
 
 ## 📂 wizards/
+
 Define wizards, es decir, asistentes con formularios paso a paso para flujos complejos o temporales.
 
-📌 *Ejemplo:*
+📌 _Ejemplo:_
+
 ```python
 class GenerarInformeWizard(models.TransientModel):
     _name = 'mi_modulo.generar_informe_wizard'
@@ -295,9 +346,11 @@ class GenerarInformeWizard(models.TransientModel):
 ---
 
 ## 📂 tests/
+
 Contiene pruebas unitarias y funcionales. Odoo usa `unittest`.
 
-📌 *Ejemplo:*
+📌 _Ejemplo:_
+
 ```python
 from odoo.tests.common import TransactionCase
 
@@ -310,9 +363,11 @@ class TestProducto(TransactionCase):
 ---
 
 ## 📂 i18n/
+
 Contiene archivos `.po` para la traducción de textos a múltiples idiomas.
 
-📌 *Ejemplo de línea en `.po`:*
+📌 _Ejemplo de línea en `.po`:_
+
 ```
 msgid "Precio"
 msgstr "Price"
@@ -321,6 +376,7 @@ msgstr "Price"
 ---
 
 ## 📂 demo/
+
 Carga datos de demostración cuando el entorno está en modo demo. Útil para pruebas y presentación del módulo.
 
 ---
@@ -344,4 +400,3 @@ Para obtener más información sobre cómo desarrollar en Odoo, consulta la [Doc
 
 ---
 
-✨ **Recuerda activar el modo desarrollador en Odoo. ¡Listo para empezar a programar!** ✨
