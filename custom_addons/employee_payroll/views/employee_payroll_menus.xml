@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="employee_payroll_menu_root" name="Employee Payroll">
+        <menuitem id="employee_payroll_first_level_menu" name="First Level">
+            <menuitem id="employee_payroll_model_menu_action" action="employee_payroll_action"/>
+        </menuitem>
+    </menuitem>
+</odoo>

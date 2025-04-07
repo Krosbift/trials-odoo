@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_employee_list" model="ir.ui.view">
+        <field name="name">employee_payroll.list</field>
+        <field name="model">employee_payroll.employee_payroll</field>
+        <field name="type">list</field>
+        <field name="arch" type="xml">
+            <list string="Employee Payroll">
+                <field name="fullName"/>
+                <field name="document"/>
+                <field name="monthly_salary"/>
+                <field name="job_position_id"/>
+                <field name="annual_salary"/>
+            </list>
+        </field>
+    </record>
+</odoo>

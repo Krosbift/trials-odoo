@@ -1,0 +1,21 @@
+{
+    "name": "Nómina de empleados",
+    "category": "Data",
+    "version": "1.0.0",
+    "depends": ["base"],
+    "data": [
+        "security/ir.model.access.csv",
+        "data/job_position_data.xml",
+        "views/employee_payroll_views.xml",
+        "views/employee_payroll_menus.xml",
+        "views/employee_payroll_list.xml",
+        "views/employee_payroll_form.xml",
+    ],
+    "demo": [
+        "demo/employee_payroll_demo.xml",
+        "demo/employee_position_demo.xml",
+    ],
+    'installable': True,
+    'application': True,
+    'license': 'LGPL-3',
+}

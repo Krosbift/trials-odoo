@@ -1,9 +1,7 @@
-__pycache__/
-*.py[cod]
-*$py.class
+# Exclude Python cache files
+**/__pycache__
+**/*.pyc
 
-# Odoo specific
-*.pyc
+# Exclude specific Odoo files
 .env
 .venv
-
