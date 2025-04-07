@@ -1,7 +1,7 @@
 {
     "name": "Necesidades de Material",
     "version": "0.1",
-    "depends": ["base"],
+    "depends": ["base", "functional_area"],
     "author": "NePinFe",
     "data": [
         "security/ir.model.access.csv",

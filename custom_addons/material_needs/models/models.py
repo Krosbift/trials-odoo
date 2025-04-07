@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 
-class MaterialNeeds(models.Model):
+class material_needs(models.Model):
     _name = "material_needs.material_needs"
     _description = "Material Requirements"
 
@@ -12,6 +12,10 @@ class MaterialNeeds(models.Model):
     approval_status_id = fields.Integer(string="Approval Status")
     total_cost = fields.Float(
         string="Total Cost", compute="_compute_total_cost", store=True
+    )
+
+    functional_area_id = fields.Many2one(
+        "functional_area.functional_area", string="Functional Area"
     )
 
     @api.depends("quantity", "unit_cost")
