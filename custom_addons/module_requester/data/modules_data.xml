@@ -1,0 +1,12 @@
+<odoo>
+  <data noupdate="1">
+    <record id="module_request_1" model="module_requester.module_requester">
+      <field name="name">Necesidades de Material</field>
+      <field name="description"></field>
+    </record>
+    <record id="module_request_2" model="module_requester.module_requester">
+      <field name="name">Nómina de empleados</field>
+      <field name="description"></field>
+    </record>
+  </data>
+</odoo>

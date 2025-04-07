@@ -1,0 +1,7 @@
+<odoo>
+  <record id="action_module_requester" model="ir.actions.act_window">
+    <field name="name">Module Requesters</field>
+    <field name="res_model">module_requester.module_requester</field>
+    <field name="view_mode">list,form</field>
+  </record>
+</odoo>

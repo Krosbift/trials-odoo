@@ -1,0 +1,13 @@
+<odoo>
+  <record id="view_list_module_requester" model="ir.ui.view">
+    <field name="name">module_requester_list</field>
+    <field name="model">module_requester.module_requester</field>
+    <field name="arch" type="xml">
+      <list string="Module Requesters">
+        <field name="id"></field>
+        <field name="name"></field>
+        <field name="description"></field>
+      </list>
+    </field>
+  </record>
+</odoo>

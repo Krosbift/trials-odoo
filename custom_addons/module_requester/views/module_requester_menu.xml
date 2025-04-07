@@ -1,0 +1,4 @@
+<odoo>
+  <menuitem id="menu_module_requester_root" name="Module Requester Management"></menuitem>
+  <menuitem action="action_module_requester" id="menu_module_requester" name="Module Requesters" parent="menu_module_requester_root"></menuitem>
+</odoo>
