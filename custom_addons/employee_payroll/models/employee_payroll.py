@@ -9,7 +9,7 @@ class employee_payroll(models.Model):
     document = fields.Char(string="Document Number", size=32, required=True)
     monthly_salary = fields.Float(string="Monthly Salary", required=True)
     job_position_id = fields.Many2one(
-        comodel_name="job_position", string="Job Position", required=True
+        comodel_name="job.position", string="Job Position", required=True
     )
     functional_area_id = fields.Many2one(
         "functional_area.functional_area", string="Functional Area"

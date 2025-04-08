@@ -12,7 +12,6 @@
         "views/employee_payroll_form.xml",
     ],
     "demo": [
-        "demo/employee_payroll_demo.xml",
         "demo/employee_position_demo.xml",
     ],
     "installable": True,
