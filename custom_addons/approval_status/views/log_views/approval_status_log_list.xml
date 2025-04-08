@@ -5,8 +5,9 @@
     <field name="arch" type="xml">
       <list string="Approval Status Log">
         <field name="module_id"></field>
-        <field name="old_status_id"></field>
-        <field name="new_status_id"></field>
+        <field name="request_id"></field>
+        <field name="secuence"></field>
+        <field name="approval_status_id"></field>
         <field name="user_id"></field>
       </list>
     </field>

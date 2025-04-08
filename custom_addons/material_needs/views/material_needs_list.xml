@@ -4,6 +4,7 @@
     <field name="model">material_needs.material_needs</field>
     <field name="arch" type="xml">
       <list string="Material Needs">
+        <field name="id" readonly="1"></field>
         <field name="material_name"></field>
         <field name="quantity"></field>
         <field name="unit_cost"></field>
