@@ -10,6 +10,8 @@
                 <field name="quantity"/>
                 <field name="unit_cost"/>
                 <field name="total_cost"/>
+                <field name="approval_status_id"></field>
+                <field name="functional_area_id"></field>
             </list>
         </field>
     </record>
