@@ -5,10 +5,9 @@ class dashboard(models.Model):
     _name = "dashboard"
     _description = "Dashboard"
 
-    # name = fields.Char()
-    # value = fields.Integer()
-    # value2 = fields.Float(compute="_value_pc", store=True)
-    # description = fields.Text()
+    # name = fields.Char(string="Categoría")
+    # value = fields.Float(string="Valor")
+
     total_cost_leases = fields.Float(
         string="Total de costos de Arrendamientos", compute="_compute_total_cost_leases"
     )
@@ -52,3 +51,32 @@ class dashboard(models.Model):
                 sum(materials.mapped("total_cost")) if materials else 0
             )
 
+    # @api.model
+    # def update_chart_data(self):
+    #     self.env["dashboard.chart.line"].search([]).unlink()
+    #     self.env["dashboard.chart.line"].create(
+    #         [
+    #             {
+    #                 "name": "Arrendamientos",
+    #                 "value": self._get_total_cost("leases.needs", "total_cost"),
+    #             },
+    #             {
+    #                 "name": "Empleados",
+    #                 "value": self._get_total_cost("employee.payroll", "annual_salary"),
+    #             },
+    #             {
+    #                 "name": "Equipos",
+    #                 "value": self._get_total_cost("equipment.needs", "total_cost"),
+    #             },
+    #             {
+    #                 "name": "Materiales",
+    #                 "value": self._get_total_cost(
+    #                     "material_needs.material_needs", "total_cost"
+    #                 ),
+    #             },
+    #         ]
+    #     )
+    #
+    # def _get_total_cost(self, model_name, field_name):
+    #     records = self.env[model_name].search([])
+    #     return sum(records.mapped(field_name)) if records else 0

@@ -3,6 +3,6 @@
     <record id="dashboard_action" model="ir.actions.act_window">
         <field name="name">Dashboard</field>
         <field name="res_model">dashboard</field> 
-        <field name="view_mode">list,graph</field>
+        <field name="view_mode">list,kanban</field>
     </record>
 </odoo>
