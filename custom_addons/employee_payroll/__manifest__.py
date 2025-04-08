@@ -1,4 +1,4 @@
-{
+{  # type: ignore
     "name": "Nómina de empleados",
     "category": "Data",
     "version": "1.0",

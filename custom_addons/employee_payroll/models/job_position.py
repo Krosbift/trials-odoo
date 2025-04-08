@@ -7,7 +7,7 @@ class job_position(models.Model):
     _rec_name = "position"
 
     position = fields.Selection(
-        [
+        [  # type: ignore
             ("administrative", "Administrative"),
             ("worker", "Worker"),
         ],
