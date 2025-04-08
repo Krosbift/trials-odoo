@@ -6,6 +6,7 @@
       <field name="document">1089930992</field>
       <field name="monthly_salary">8000000</field>
       <field name="job_position_id" ref="job_position_administrative"/>
+      <field name="functional_area_id" ref="functional_area_1"/>
     </record>
   </data>
 </odoo>

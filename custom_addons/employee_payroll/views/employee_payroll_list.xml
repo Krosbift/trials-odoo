@@ -10,6 +10,7 @@
                 <field name="document"/>
                 <field name="monthly_salary"/>
                 <field name="job_position_id"/>
+                <field name="functional_area_id"/>
                 <field name="annual_salary"/>
             </list>
         </field>

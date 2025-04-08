@@ -2,31 +2,6 @@ from odoo import models, fields, api
 
 
 class employee_payroll(models.Model):
-    """
-    Module: employee_payroll
-
-    This module defines the `employee_payroll` model, which represents employee payroll information.
-
-    Classes:
-        - employee_payroll: A model to manage employee payroll details, including full name, document number,
-          monthly salary, job position, and computed annual salary.
-
-    Fields:
-        - fullName (Char): The full name of the employee. Required field with a maximum size of 32 characters.
-        - document (Char): The document number of the employee. Required field with a maximum size of 32 characters.
-        - monthly_salary (Float): The monthly salary of the employee. Required field.
-        - job_position_id (Many2one): A reference to the job position of the employee. Required field.
-        - annual_salary (Float): The computed annual salary of the employee, calculated as `monthly_salary * 12`.
-
-    Methods:
-        - _compute_annual_salary: Computes the annual salary based on the monthly salary.
-        - _check_monthly_salary: Ensures that the monthly salary is greater than zero. Raises a ValidationError if not.
-
-    Dependencies:
-        - Depends on the `monthly_salary` field for computing the `annual_salary`.
-        - Constrains the `monthly_salary` field to ensure it is a positive value.
-    """
-
     _name = "employee.payroll"
     _description = "Employee Payroll Request"
 
@@ -35,6 +10,9 @@ class employee_payroll(models.Model):
     monthly_salary = fields.Float(string="Monthly Salary", required=True)
     job_position_id = fields.Many2one(
         comodel_name="job_position", string="Job Position", required=True
+    )
+    functional_area_id = fields.Many2one(
+        "functional_area.functional_area", string="Functional Area"
     )
     annual_salary = fields.Float(
         string="Annual Salary", compute="_compute_annual_salary", store=True

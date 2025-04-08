@@ -10,13 +10,13 @@ class material_needs(models.Model):
     unit_cost = fields.Float(string="Unit Cost")
     # approval_status_id = fields.Many2one("approval.status", string="Approval status")
     approval_status_id = fields.Integer(string="Approval Status")
+    functional_area_id = fields.Many2one(
+        "functional_area.functional_area", string="Functional Area"
+    )
     total_cost = fields.Float(
         string="Total Cost", compute="_compute_total_cost", store=True
     )
 
-    functional_area_id = fields.Many2one(
-        "functional_area.functional_area", string="Functional Area"
-    )
 
     @api.depends("quantity", "unit_cost")
     def _compute_total_cost(self):

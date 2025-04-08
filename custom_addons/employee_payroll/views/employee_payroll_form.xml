@@ -16,6 +16,7 @@
                     <group name="employee_details" string="Employee Payroll">
                         <field name="monthly_salary"/>
                         <field name="job_position_id"/>
+                        <field name="functional_area_id"/>
                         <field name="annual_salary"/>
                     </group>
                 </sheet>
