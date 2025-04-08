@@ -5,6 +5,8 @@ class material_needs(models.Model):
     _name = "material_needs.material_needs"
     _description = "Material Requirements"
 
+    module_id = 2
+
     material_name = fields.Char(string="Material Name", required=True)
     quantity = fields.Integer(string="Quantity", default=1)
     unit_cost = fields.Float(string="Unit Cost")
@@ -16,7 +18,6 @@ class material_needs(models.Model):
     total_cost = fields.Float(
         string="Total Cost", compute="_compute_total_cost", store=True
     )
-
 
     @api.depends("quantity", "unit_cost")
     def _compute_total_cost(self):
