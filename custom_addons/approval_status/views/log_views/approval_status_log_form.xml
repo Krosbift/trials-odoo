@@ -1,0 +1,18 @@
+<odoo>
+  <record id="view_approval_status_log_form" model="ir.ui.view">
+    <field name="name">approval_status_log.form</field>
+    <field name="model">approval_status_log.approval_status_log</field>
+    <field name="arch" type="xml">
+      <form string="Approval Status Log">
+        <sheet>
+          <group>
+            <field name="module_id"></field>
+            <field name="old_status_id"></field>
+            <field name="new_status_id"></field>
+            <field name="user_id"></field>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+</odoo>
