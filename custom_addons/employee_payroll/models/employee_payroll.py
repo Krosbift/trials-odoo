@@ -11,9 +11,15 @@ class employee_payroll(models.Model):
     job_position_id = fields.Many2one(
         comodel_name="job.position", string="Job Position", required=True
     )
+
+    approval_status_id = fields.Integer(string="Approval Status")
+    # approval_status_id = fields.Many2one(
+    #     "approval_status_type.approval_status_type", string="Approval Status"
+    # )
     functional_area_id = fields.Many2one(
         "functional_area.functional_area", string="Functional Area"
     )
+
     annual_salary = fields.Float(
         string="Annual Salary", compute="_compute_annual_salary", store=True
     )

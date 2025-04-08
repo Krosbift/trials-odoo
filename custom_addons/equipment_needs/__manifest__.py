@@ -1,8 +1,8 @@
-{
+{  # type: ignore
     "name": "Solicitudes de equipo",
     "category": "Data",
     "version": "0.0.1",
-    "depends": ["base"],
+    "depends": ["base", "functional_area"],
     "data": [
         "security/ir.model.access.csv",
         "views/equipment_needs_views.xml",
