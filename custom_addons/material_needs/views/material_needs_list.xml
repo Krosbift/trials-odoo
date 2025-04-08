@@ -8,7 +8,7 @@
         <field name="quantity"></field>
         <field name="unit_cost"></field>
         <field name="total_cost"></field>
-        <!-- <field name="approval_status_id"></field> -->
+        <field name="approval_status_id"></field>
         <field name="functional_area_id"></field>
       </list>
     </field>

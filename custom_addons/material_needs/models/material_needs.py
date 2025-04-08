@@ -10,8 +10,9 @@ class material_needs(models.Model):
     material_name = fields.Char(string="Material Name", required=True)
     quantity = fields.Integer(string="Quantity", default=1)
     unit_cost = fields.Float(string="Unit Cost")
-    # approval_status_id = fields.Many2one("approval.status", string="Approval status")
-    approval_status_id = fields.Integer(string="Approval Status")
+    approval_status_id = fields.Many2one(
+        "approval_status_type.approval_status_type", string="Approval Status"
+    )
     functional_area_id = fields.Many2one(
         "functional_area.functional_area", string="Functional Area"
     )
