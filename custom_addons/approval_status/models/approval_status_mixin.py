@@ -10,7 +10,11 @@ class ApprovalStatusMixin(models.AbstractModel):
 
         # Buscar todos los logs del request actual
         logs = log_model.search(
-            [("request_id", "=", record.id)],
+            [
+                ("module_id", "=", self.module_id),
+                ("request_id", "=", record.id),
+                ("user_id", "=", self.env.uid),
+            ],
             order="secuence desc",
             limit=1,
         )
