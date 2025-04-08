@@ -17,7 +17,8 @@
                         <field name="monthly_salary"/>
                         <field name="job_position_id"/>
                         <field name="functional_area_id"/>
-                        <field name="annual_salary"/>
+                        <field name="approval_status_id"/>
+                        <field name="annual_salary" readonly="1"/>
                     </group>
                 </sheet>
             </form>

@@ -1,4 +1,0 @@
-<odoo>
-  <menuitem id="menu_approval_status_root" name="Approval Status Management"></menuitem>
-  <menuitem action="action_approval_status_type" id="menu_approval_status_type" name="Approval Status Types" parent="menu_approval_status_root"></menuitem>
-</odoo>

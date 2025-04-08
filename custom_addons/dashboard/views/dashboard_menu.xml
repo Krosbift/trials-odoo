@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="dashboard_menu_root" name="Dashboard">
+        <menuitem id="dashboard_menu_items" name="Dashboard" action="dashboard_action"/>
+    </menuitem>
+</odoo>

@@ -9,6 +9,9 @@
                 <field name="place"/>
                 <field name="annual_amount"/>
                 <field name="cost"/>
+                <field name="total_cost"></field>
+                <field name="approval_status_id"></field>
+                <field name="functional_area_id"></field>
             </list>
         </field>
     </record>

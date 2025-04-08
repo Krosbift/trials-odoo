@@ -1,7 +1,7 @@
 <odoo>
-    <record id="action_approval_status_log" model="ir.actions.act_window">
-        <field name="name">Approval Status Log</field>
-        <field name="res_model">approval_status_log.approval_status_log</field>
-        <field name="view_mode">list,form</field>
-    </record>
+  <record id="action_approval_status_log" model="ir.actions.act_window">
+    <field name="name">Approval Status Log</field>
+    <field name="res_model">approval_status_log.approval_status_log</field>
+    <field name="view_mode">list,form</field>
+  </record>
 </odoo>

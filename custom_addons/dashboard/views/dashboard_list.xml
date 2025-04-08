@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="dashboard_list" model="ir.ui.view">
+        <field name="name">dashboard.list</field>
+        <field name="model">dashboard</field>
+        <field name="type">list</field>
+        <field name="arch" type="xml">
+            <list string="dashboard" >
+                <field name="total_cost_leases"/>
+                <field name="total_cost_employee"/>
+                <field name="total_cost_equipment"/>
+                <field name="total_cost_material"/>
+            </list>
+        </field>
+    </record>
+</odoo>
