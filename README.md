@@ -1,4 +1,4 @@
-# 🚀 trials-odoo: Repositorio para practicar Odoo y saber de que se basa el framework
+# 🚀 trials-odoo: Repositorio para practicar Odoo y saber de que se basa el framework, con una mini app de presupuesto
 
 <p align="center">
     <img src="https://www.globalteckz.com/wp-content/uploads/2019/03/ODOO-APPS-COMMUNITY-APPS-ODOO-PAID-APPS-ODOO-ENTERPRISE-MODULES-ODOO-MODULES.jpg" alt="Odoo ERP" width="800px">
@@ -399,4 +399,3 @@ Carga datos de demostración cuando el entorno está en modo demo. Útil para pr
 Para obtener más información sobre cómo desarrollar en Odoo, consulta la [Documentación para Desarrolladores de Odoo](https://www.odoo.com/documentation/18.0/developer.html).
 
 ---
-
