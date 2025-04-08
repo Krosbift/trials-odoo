@@ -1,4 +1,4 @@
-{
+{  # type: ignore
     "name": "Arrendamientos",
     "category": "data",
     "depends": ["base", "functional_area"],

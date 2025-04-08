@@ -1,4 +1,4 @@
-{
+{  # type: ignore
     "name": "Solicitudes de equipo",
     "category": "Data",
     "version": "0.0.1",

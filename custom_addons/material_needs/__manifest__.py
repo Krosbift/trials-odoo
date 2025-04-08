@@ -1,4 +1,4 @@
-{
+{  # type: ignore
     "name": "Necesidades de Material",
     "category": "Data",
     "version": "0.1",

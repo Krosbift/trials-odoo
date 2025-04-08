@@ -1,4 +1,4 @@
-{
+{  # type: ignore
     "name": "Area Funcional",
     "category": "Parameters",
     "version": "0.1",
