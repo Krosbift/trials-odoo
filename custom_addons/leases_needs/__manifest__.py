@@ -1,7 +1,7 @@
 {  # type: ignore
     "name": "Arrendamientos",
     "category": "data",
-    "depends": ["base", "functional_area"],
+    "depends": ["base", "functional_area", "approval_status"],
     "data": [
         "security/ir.model.access.csv",
         "views/leases_needs_list.xml",
