@@ -1,4 +1,4 @@
-{  # type: ignore
+{
     "name": "Necesidades de Material",
     "category": "Data",
     "version": "0.1",
@@ -6,6 +6,7 @@
     "author": "NePinFe",
     "data": [
         "security/ir.model.access.csv",
+        "security/ir.rule.xml",
         "views/material_needs_views.xml",
         "views/material_needs_menu.xml",
         "views/material_needs_list.xml",

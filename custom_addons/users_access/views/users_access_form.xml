@@ -15,7 +15,6 @@
                         <field name="mobile"/>
                         <field name="image_1920" widget="image" class="oe_avatar"/>
                         <field name="functional_area_ids" widget="many2many_tags"/>
-                        <field name="share" widget="boolean_toggle" string="Superuser Access"/>
                     </group>
                 </sheet>
             </form>

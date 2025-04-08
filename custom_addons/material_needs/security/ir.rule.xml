@@ -1,0 +1,12 @@
+<odoo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="ir.rule.xsd">
+    <data noupdate="1">
+        <record id="material_needs_rule_by_functional_area" model="ir.rule">
+            <field name="name">Restricción por área funcional</field>
+            <field name="model_id" ref="model_material_needs_material_needs"/>
+            <field name="domain_force">[('functional_area_id', 'in', user.functional_area_ids.ids)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+            <field name="perm_read" eval="True"/>
+        </record>
+    </data>
+</odoo>

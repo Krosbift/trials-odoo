@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="odoo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="data">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="record">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="field" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="name" use="required" />
+                                                        <xs:attribute name="ref" />
+                                                        <xs:attribute name="eval" />
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" use="required" />
+                                    <xs:attribute name="model" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="noupdate" type="xs:integer" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
