@@ -5,6 +5,8 @@ from odoo.exceptions import ValidationError
 class leases_needs(models.Model):
     _name = "leases.needs"
     _description = "Leases Description"
+    _inherit = ["approval.status.mixin"]
+    module_id = 4
 
     place = fields.Char(string="Place", required=True)
     annual_amount = fields.Integer(string="Annual Amount", required=True)
@@ -13,10 +15,9 @@ class leases_needs(models.Model):
         string="Total Cost", compute="_compute_total_cost", store=True
     )
 
-    approval_status_id = fields.Integer(string="Approval Status")
-    # approval_status_id = fields.Many2one(
-    #     "approval_status_type.approval_status_type", string="Approval Status"
-    # )
+    approval_status_id = fields.Many2one(
+        "approval_status_type.approval_status_type", string="Approval Status"
+    )
     functional_area_id = fields.Many2one(
         "functional_area.functional_area", string="Functional Area"
     )

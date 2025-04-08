@@ -1,0 +1,73 @@
+<odoo>
+    <record id="view_dashboard_kanban_chart" model="ir.ui.view">
+        <field name="name">dashboard.kanban.chart</field>
+        <field name="model">dashboard</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="total_cost_leases"/>
+                <field name="total_cost_employee"/>
+                <field name="total_cost_equipment"/>
+                <field name="total_cost_material"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <!-- <t t-set="chartId" t-value="'chart_' + record.id.value"/> -->
+                            <!-- <canvas t-att-id="chartId" width="400" height="200"/> -->
+
+                            <t t-set="chartId" t-value="'chart_' + record.id.value"/>
+                            <canvas t-att-id="chartId" width="4000" height="2000"/>
+
+                            <!-- Carga de Chart.js -->
+                            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                            <!-- Script de inicialización del gráfico -->
+                            <script type="text/javascript">
+                                setTimeout(function() {
+                                    var ctx = document.getElementById("<t t-esc='chartId'/>").getContext("2d");
+                                    new Chart(ctx, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ['Arrendamientos', 'Empleados', 'Equipos', 'Materiales'],
+                                            datasets: [{
+                                                label: 'Costos',
+                                                data: [
+                                                    <t t-esc="record.total_cost_leases.raw_value"/>,
+                                                    <t t-esc="record.total_cost_employee.raw_value"/>,
+                                                    <t t-esc="record.total_cost_equipment.raw_value"/>,
+                                                    <t t-esc="record.total_cost_material.raw_value"/>
+                                                ],
+                                                backgroundColor: ['#007bff', '#28a745', '#ffc107', '#dc3545']
+                                            }]
+                                        }
+                                    });
+                                }, 500);
+                            </script>
+                                <script type="text/javascript">
+                                setTimeout(function() {
+                                    var ctx = document.getElementById("<t t-esc='chartId'/>").getContext("2d");
+                                    new Chart(ctx, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ['Arrendamientos', 'Empleados', 'Equipos', 'Materiales'],
+                                            datasets: [{
+                                                label: 'Costos',
+                                                data: [
+                                                    <t t-esc="record.total_cost_leases.raw_value"/>,
+                                                    <t t-esc="record.total_cost_employee.raw_value"/>,
+                                                    <t t-esc="record.total_cost_equipment.raw_value"/>,
+                                                    <t t-esc="record.total_cost_material.raw_value"/>
+                                                ],
+                                                backgroundColor: ['#007bff', '#28a745', '#ffc107', '#dc3545']
+                                            }]
+                                        }
+                                    });
+                                }, 500);
+                            </script>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+</odoo>
+

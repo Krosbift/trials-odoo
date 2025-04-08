@@ -5,7 +5,11 @@ class material_needs(models.Model):
     _name = "material_needs.material_needs"
     _description = "Material Requirements"
     _inherit = ["approval.status.mixin"]
+<<<<<<< HEAD
     module_id = 2
+=======
+    module_id = 1
+>>>>>>> eacb265e372ef6bd48ffb19e2e1237fe6935f8f6
 
     material_name = fields.Char(string="Material Name", required=True)
     quantity = fields.Integer(string="Quantity", default=1)

@@ -2,7 +2,7 @@
     "name": "Nómina de empleados",
     "category": "Data",
     "version": "1.0",
-    "depends": ["base", "functional_area"],
+    "depends": ["base", "functional_area", "approval_status"],
     "data": [
         "security/ir.model.access.csv",
         "data/employee_position_data.xml",
