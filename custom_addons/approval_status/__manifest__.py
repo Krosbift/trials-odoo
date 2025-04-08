@@ -1,7 +1,7 @@
 {  # type: ignore
     "name": "Estados de Aprobación",
     "version": "0.1",
-    "depends": ["base"],
+    "depends": ["base", "module_requester"],
     "author": "NePinFe",
     "data": [
         "data/approval_status_type_data.xml",
