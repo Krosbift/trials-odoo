@@ -1,0 +1,16 @@
+<odoo>
+  <data noupdate="1">
+    <record id="approval_status_type_validated" model="approval_status_type.approval_status_type">
+      <field name="name">Validado</field>
+      <field name="description">validated</field>
+    </record>
+    <record id="approval_status_type_unreviewed" model="approval_status_type.approval_status_type">
+      <field name="name">Sin Revisar</field>
+      <field name="description">unreviewed</field>
+    </record>
+    <record id="approval_status_type_not_validated" model="approval_status_type.approval_status_type">
+      <field name="name">No Validado</field>
+      <field name="description">not_validated</field>
+    </record>
+  </data>
+</odoo>
