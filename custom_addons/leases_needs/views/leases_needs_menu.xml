@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="view_leases_needs_root" name="Leases Needs">
+       <menuitem id="leases_needs_menu_items" name="Manage Leases" action="leases_needs_actions"/>
+   </menuitem>
+</odoo>

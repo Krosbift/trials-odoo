@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_leases_needs_list" model="ir.ui.view">
+        <field name="name">leases.needs.list</field>
+        <field name="model">leases.needs</field>
+        <field name="type">list</field>
+        <field name="arch" type="xml">
+            <list string="Leases needs" decoration-danger="annual_amount &lt;=0 or cost &lt;=0">
+                <field name="place"/>
+                <field name="annual_amount"/>
+                <field name="cost"/>
+            </list>
+        </field>
+    </record>
+</odoo>
