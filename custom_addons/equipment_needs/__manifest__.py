@@ -2,7 +2,7 @@
     "name": "Solicitudes de equipo",
     "category": "Data",
     "version": "0.0.1",
-    "depends": ["base", "functional_area"],
+    "depends": ["base", "functional_area", "approval_status"],
     "data": [
         "security/ir.model.access.csv",
         "views/equipment_needs_views.xml",
