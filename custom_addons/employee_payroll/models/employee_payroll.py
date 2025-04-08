@@ -5,6 +5,9 @@ class employee_payroll(models.Model):
     _name = "employee.payroll"
     _description = "Employee Payroll Request"
 
+    _inherit = ["approval.status.mixin"]
+    module_id = 2
+
     fullName = fields.Char(string="Full Name", size=32, required=True, trim=True)
     document = fields.Char(string="Document Number", size=32, required=True)
     monthly_salary = fields.Float(string="Monthly Salary", required=True)
@@ -12,10 +15,10 @@ class employee_payroll(models.Model):
         comodel_name="job.position", string="Job Position", required=True
     )
 
-    approval_status_id = fields.Integer(string="Approval Status")
-    # approval_status_id = fields.Many2one(
-    #     "approval_status_type.approval_status_type", string="Approval Status"
-    # )
+    approval_status_id = fields.Many2one(
+        "approval_status_type.approval_status_type", string="Approval Status"
+    )
+
     functional_area_id = fields.Many2one(
         "functional_area.functional_area", string="Functional Area"
     )
