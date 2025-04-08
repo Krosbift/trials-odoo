@@ -1,5 +1,6 @@
 from odoo import models
 
+
 class ApprovalStatusMixin(models.AbstractModel):
     _name = "approval.status.mixin"
     _description = "Mixin for approval status logging"
@@ -7,21 +8,21 @@ class ApprovalStatusMixin(models.AbstractModel):
     def _create_approval_status_log(self, record, new_status_id):
         log_model = self.env["approval_status_log.approval_status_log"]
 
-        existing_log = log_model.search(
-            [
-                ("module_id", "=", self.module_id),
-                ("request_id", "=", record.id),
-                ("user_id", "=", self.env.uid),
-            ],
+        # Buscar todos los logs del request actual
+        logs = log_model.search(
+            [("request_id", "=", record.id)],
+            order="secuence desc",
             limit=1,
         )
+
+        last_secuence = logs.secuence if logs else 0
 
         log_vals = {
             "module_id": self.module_id,
             "request_id": record.id,
             "user_id": self.env.uid,
             "approval_status_id": new_status_id,
-            "secuence": (existing_log.secuence + 1) if existing_log else 1,
+            "secuence": last_secuence + 1,
         }
 
         return log_model.create(log_vals)
