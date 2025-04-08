@@ -1,7 +1,7 @@
 {
     "name": "Arrendamientos",
     "category": "data",
-    "depends": ["base"],
+    "depends": ["base", "functional_area"],
     "data": [
         "security/ir.model.access.csv",
         "views/leases_needs_list.xml",
