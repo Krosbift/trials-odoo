@@ -1,0 +1,21 @@
+{
+    "name": "Users Access",
+    "category": "user",
+    "version": "0.1",
+    "depends": ["base", "functional_area"],
+    "data": [
+        "security/custom_user_group.xml",
+        "security/groups.xml",
+        "security/ir.model.access.csv",
+        "security/ir.rules.xml",
+        "views/res_users_view.xml",
+        "views/users_access_view.xml",
+        "views/users_access_menu.xml",
+        "views/users_access_list.xml",
+        "views/users_access_form.xml",
+    ],
+    "installable": True,
+    "application": True,
+    "auto_install": True,
+    "license": "LGPL-3",
+}

@@ -1,0 +1,24 @@
+<odoo>
+    <record id="view_form_users_access" model="ir.ui.view">
+        <field name="name">res_users_form</field>
+        <field name="model">res.users</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Users Access">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="login"/>
+                        <field name="password" password="True" widget="toggle_password"/>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="mobile"/>
+                        <field name="image_1920" widget="image" class="oe_avatar"/>
+                        <field name="functional_area_ids" widget="many2many_tags"/>
+                        <field name="share" widget="boolean_toggle" string="Superuser Access"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

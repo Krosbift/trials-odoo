@@ -1,0 +1,12 @@
+<odoo>
+    <record id="rule_users_see_own_dependencia" model="ir.rule">
+        <field name="name">Users by dependency</field>
+        <field name="model_id" ref="base.model_res_users"/>
+        <field name="domain_force">[('functional_area_ids', 'in', user.functional_area_ids.ids)]</field>
+        <field name="groups" eval="[(4, ref('users_access.group_users_dependency'))]"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+</odoo>
