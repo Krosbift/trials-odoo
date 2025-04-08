@@ -15,9 +15,9 @@ class approval_status_log(models.Model):
 
     module_id = fields.Integer(string="Module ID", required=True)
 
-    old_status_id = fields.Many2one("approval_status_type", string="Previous Status")
-    new_status_id = fields.Many2one("approval_status_type", string="New Status")
 
+    old_status_id = fields.Many2one("approval_status_type.approval_status_type", string="Previous Status")
+    new_status_id = fields.Many2one("approval_status_type.approval_status_type", string="New Status")
     # user_id = fields.Many2one("res.users", string="Changed By", default=lambda self: self.env.user)
 
     user_id = fields.Integer(string="Changed By")
